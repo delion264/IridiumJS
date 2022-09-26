@@ -44,7 +44,7 @@ export class Message {
 
     if (match != null) {
       const swapped = match[1] == "RAW";
-      const filename = "/dev/stdin" ? "-" : match[2];
+      const filename = match[2] == "/dev/stdin" ? "-" : match[2];
       const timestamp = match[3];
       const frequency = match[4];
       const snr = parseFloat(match[5]);
@@ -61,6 +61,6 @@ export class Message {
       }
       const symbols = Math.floor(bitstream_raw.length / 2);
     }
-    // Line 106 in bitsparser.py
+    // Up to line 106 in bitsparser.py
   }
 }

@@ -43,13 +43,13 @@ export class Message {
     const match = this.pattern.exec(packet);
 
     if (match != null) {
-      const swapped = match[1] == "RAW";
-      const filename = match[2] == "/dev/stdin" ? "-" : match[2];
+      const swapped = match[1] === "RAW";
+      const filename = match[2] === "/dev/stdin" ? "-" : match[2];
       const timestamp = match[3];
       const frequency = match[4];
       const snr = parseFloat(match[5]);
       const noise = parseFloat(match[6]);
-      const access_ok = match[7] == "OK";
+      const access_ok = match[7] === "OK";
       const id = match[8];
       const confidence = match[9];
       const rxlevel_db = 20 * Math.log10(parseFloat(match[10]));

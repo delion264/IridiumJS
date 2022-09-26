@@ -1,5 +1,5 @@
 import base64url from "base64url";
-import { Message } from "./message";
+import { TestMessage } from "./test-message";
 
 const strToEncode = "Any string you want to encode";
 const encodedStr = base64url.encode(strToEncode);
@@ -10,6 +10,6 @@ const values: (number | string | number[])[] = [6, 12, 13, "string"];
 values.push([1]);
 console.table(values);
 
-const testMsg = new Message();
+const testMsg = new TestMessage();
 testMsg.setLength(8);
 console.log(testMsg.length);

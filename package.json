@@ -9,7 +9,7 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "GPL-3.0-only",
   "devDependencies": {
     "@types/node": "^18.7.21",
     "@typescript-eslint/eslint-plugin": "^5.38.0",
